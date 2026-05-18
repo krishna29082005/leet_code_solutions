@@ -14,10 +14,11 @@ public:
     int maxDepth(TreeNode* root) {
 
         queue<struct TreeNode*> q;
-        vector<vector<int>> ans;
-        if(root == NULL) return ans.size();
+        
+        if(root == NULL) return 0;
 
         q.push(root);
+        int cnt = 0;
 
         while(!q.empty())
         {
@@ -38,8 +39,8 @@ public:
                }
                level.push_back(node -> val);
             }
-            ans.push_back(level);
+            cnt++;
         }
-        return ans.size();
+        return cnt;
     }
 };
