@@ -34,12 +34,12 @@ public:
     int countNodes(TreeNode* root) 
     {
         if(root == NULL) return 0;
-        int lh = hl(root -> left);
-        int rh = hr(root -> right);
+        int lh = hl(root);
+        int rh = hr(root);
 
         if(lh == rh)
         {
-           lh++;
+           
            return (1 << lh) - 1;
         }
         else{
