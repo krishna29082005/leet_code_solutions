@@ -9,51 +9,53 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+class BSTiterator{
+    public:
+
+    stack<TreeNode*> st;
+    bool reverse = true;
+
+    
+    BSTiterator(TreeNode* root , bool isreverse){
+        reverse = isreverse;
+        push_all(root);
+    }
+    
+    int next(){
+        TreeNode* temp = st.top();
+        st.pop();
+        if(reverse == true)
+            push_all(temp -> left);
+        else
+            push_all(temp -> right);
+        
+        return temp -> val;
+    }
+
+
+private: 
+    void push_all(TreeNode* root){
+        while(root != NULL){
+        st.push(root);
+        if(reverse == true) root = root -> right;
+        else root = root -> left;
+        }
+    }
+};
 class Solution {
 public:
-      vector<int> helper(TreeNode* root){
-      vector<int>ans;
-      if(root == NULL) return ans;
-      TreeNode* cur = root;
-      while(cur != NULL){
-        if(cur -> left == NULL){
-            ans.push_back(cur -> val);
-            cur = cur -> right;
-        }
-        else{
-            TreeNode* prev = cur -> left;
-            while(prev -> right != NULL && prev -> right != cur){
-                prev = prev -> right;
-            }
-            if(prev -> right == NULL)
-            {
-                prev -> right = cur;
-                cur = cur -> left;
-            }
-            if(prev -> right == cur){
-                prev -> right = NULL;
-                ans.push_back(cur -> val);
-                cur = cur -> right;
-            }
-        }
-      }  
-      return ans;
-      }
+    
     bool findTarget(TreeNode* root, int k) {
         if(root == NULL) return false;
-        vector<int> ans = helper(root);
-        int i = 0;
-        int j = ans.size() - 1;
-        while(i < j){
-            if(ans[i] + ans[j] == k)
-            return true;
-            if(ans[i] + ans[j] < k){
-                i++;
-            }
-            else{
-                j--;
-            }
-        }
-        return false;
+        BSTiterator  l (root , false);
+        BSTiterator  r (root , true);
+        int i = l.next();
+        int j = r.next();  
+        while(i < j)  {
+        if(i + j == k) return true;
+        else if(i + j < k) i =  l.next();
+        else j = r.next();
+        }  
+        return false; 
     }
 };
