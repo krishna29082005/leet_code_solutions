@@ -45,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0124-binary-tree-maximum-path-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
 | [0199-binary-tree-right-side-view](https://github.com/krishna29082005/leet_code_solutions/tree/master/0199-binary-tree-right-side-view) |
+| [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/krishna29082005/leet_code_solutions/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
@@ -64,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0104-maximum-depth-of-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
 | [0199-binary-tree-right-side-view](https://github.com/krishna29082005/leet_code_solutions/tree/master/0199-binary-tree-right-side-view) |
+| [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0547-number-of-provinces](https://github.com/krishna29082005/leet_code_solutions/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/krishna29082005/leet_code_solutions/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -142,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
+| [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0994-rotting-oranges](https://github.com/krishna29082005/leet_code_solutions/tree/master/0994-rotting-oranges) |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1020-number-of-enclaves](https://github.com/krishna29082005/leet_code_solutions/tree/master/1020-number-of-enclaves) |
@@ -186,6 +189,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
+| [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/krishna29082005/leet_code_solutions/tree/master/0547-number-of-provinces) |
 | [1020-number-of-enclaves](https://github.com/krishna29082005/leet_code_solutions/tree/master/1020-number-of-enclaves) |
 ## Graph Theory
@@ -196,6 +200,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
+| [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0994-rotting-oranges](https://github.com/krishna29082005/leet_code_solutions/tree/master/0994-rotting-oranges) |
 | [1020-number-of-enclaves](https://github.com/krishna29082005/leet_code_solutions/tree/master/1020-number-of-enclaves) |
 <!---LeetCode Topics End-->
