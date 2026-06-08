@@ -28,8 +28,9 @@ public:
         vector<int> vis(numCourses , 0);
         vector<int> pathvis(numCourses , 0);
         for(int i = 0 ; i < numCourses ; i++){
+            if(!vis[i]){
             if(dfs(i , adj , vis , pathvis) == false) return false;
-            
+            }
         }
         return true;
     }
