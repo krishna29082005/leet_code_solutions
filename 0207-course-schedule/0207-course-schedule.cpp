@@ -1,19 +1,21 @@
 class Solution {
 public:
-    int flag = 1;
-    void dfs(int i , vector<vector<int>> &adj , vector<int>& vis , stack<int>& st , int start)
+    bool dfs(int i , vector<vector<int>> &adj , vector<int>& vis , vector<int>& pathvis)
     {
        vis[i] = 1;
+       pathvis[i] = 1;
+
        for(auto it : adj[i]){
-           if(it == start) 
-           {flag = 0;
-            break;
+           if(!vis[it]) { 
+               if(dfs(it , adj , vis ,pathvis) == false)
+               return false;
            }
-           if(!vis[it]){
-               dfs(it , adj , vis , st , start);
+           else if(pathvis[it] == 1){
+               return false;
            }
        }
-       st.push(i);
+       pathvis[i] = 0;
+       return true;
     }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         vector<vector<int>> adj(numCourses);
@@ -23,17 +25,12 @@ public:
             int v = prerequisites[i][1];
             adj[v].push_back(u);
         }
-        
-        stack<int> st;
-        
+        vector<int> vis(numCourses , 0);
+        vector<int> pathvis(numCourses , 0);
         for(int i = 0 ; i < numCourses ; i++){
-            vector<int> vis(numCourses , 0);
-            if(!vis[i]){
-            int start = i;
-            dfs(i , adj , vis , st , start);
-            }
+            if(dfs(i , adj , vis , pathvis) == false) return false;
+            
         }
-        if(flag == 0) return false;
         return true;
     }
 };
