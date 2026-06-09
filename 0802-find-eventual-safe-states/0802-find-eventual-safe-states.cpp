@@ -1,35 +1,38 @@
 class Solution {
 public:
-    bool iscycle(int i , vector<vector<int>>& graph , vector<int>& vis , 
-    vector<int>& pathvis){
-        vis[i] = 1;
-        pathvis[i] = 1;
 
-        for(auto it : graph[i]){
-            if(!vis[it]){
-                if(iscycle(it , graph , vis , pathvis) == true)
-                return true;
-            }
-            else if(pathvis[it] == 1 && vis[it] == 1){
-                return true;
+    bool dfs(int node, vector<vector<int>>& graph,
+             vector<int>& state) {
+
+        if(state[node] == 1) return false; // cycle
+        if(state[node] == 2) return true;  // already safe
+        if(state[node] == 3) return false; // already unsafe
+
+        state[node] = 1; // visiting
+
+        for(auto nxt : graph[node]) {
+            if(!dfs(nxt, graph, state)) {
+                state[node] = 3;
+                return false;
             }
         }
-        pathvis[i] = 0;
-        return false;
+
+        state[node] = 2; // safe
+        return true;
     }
+
     vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
-    int n = graph.size();
-    vector<int> ans;
-    for(int i = 0 ; i < n ; i++){
-        vector<int> vis(n , 0);
-        vector<int> pathvis(n , 0);
-        if(iscycle(i , graph , vis , pathvis) == false){
-            ans.push_back(i);
+
+        int n = graph.size();
+
+        vector<int> state(n, 0);
+        vector<int> ans;
+
+        for(int i = 0; i < n; i++) {
+            if(dfs(i, graph, state))
+                ans.push_back(i);
         }
-        else {
-            continue;
-        }
-     }   
-     return ans;
+
+        return ans;
     }
 };
