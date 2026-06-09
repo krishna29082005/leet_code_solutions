@@ -1,22 +1,6 @@
 class Solution {
 public:
-    bool dfs(int i , vector<vector<int>> &adj , vector<int>& vis , vector<int>& pathvis)
-    {
-       vis[i] = 1;
-       pathvis[i] = 1;
 
-       for(auto it : adj[i]){
-           if(!vis[it]) { 
-               if(dfs(it , adj , vis ,pathvis) == false)
-               return false;
-           }
-           else if(pathvis[it] == 1){
-               return false;
-           }
-       }
-       pathvis[i] = 0;
-       return true;
-    }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
         vector<vector<int>> adj(numCourses);
         int e = prerequisites.size();
@@ -25,13 +9,34 @@ public:
             int v = prerequisites[i][1];
             adj[v].push_back(u);
         }
-        vector<int> vis(numCourses , 0);
-        vector<int> pathvis(numCourses , 0);
+        vector<int> indeg(numCourses , 0);
+        vector<int> ans;
+        queue<int>q;
         for(int i = 0 ; i < numCourses ; i++){
-            if(!vis[i]){
-            if(dfs(i , adj , vis , pathvis) == false) return false;
+            for(auto it : adj[i]){
+                indeg[it]++;
             }
         }
-        return true;
+        
+        for(int i = 0 ; i < numCourses ; i++){
+            if(indeg[i] == 0){
+                q.push(i);
+            }
+        }
+        
+        while(!q.empty()){
+            int temp = q.front();
+            q.pop();
+            ans.push_back(temp);
+
+            for(auto it : adj[temp]){
+                indeg[it]--;
+                if(indeg[it] == 0){
+                    q.push(it);
+                }
+            }
+        }
+        if(numCourses == ans.size()) return true;
+        return false;
     }
 };
