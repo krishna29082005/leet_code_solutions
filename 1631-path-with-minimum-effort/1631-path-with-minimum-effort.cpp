@@ -17,6 +17,7 @@ public:
             int dis = it.first;
             int i = it.second.first;
             int j = it.second.second;
+            if(i == n-1 && j == m-1) return dis;
             pq.pop();
             if(dis > vis[i][j]) continue;
             for(int x = 0 ; x < 4 ; x++){
@@ -34,8 +35,6 @@ public:
             }
         }
         }
-        int ans = vis[n-1][m-1];
-        if(ans == INT_MAX) return -1;
-        return ans;
+        return -1;
     }
 };
