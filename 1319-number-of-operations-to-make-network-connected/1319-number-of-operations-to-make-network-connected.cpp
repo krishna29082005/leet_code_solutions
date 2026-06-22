@@ -39,21 +39,23 @@ class disjoint_set{
 class Solution {
 public:
     int makeConnected(int n, vector<vector<int>>& connections) {
-      int needed = n - 1;
-      int have = connections.size();
-      if(needed > have) return -1;
-      disjoint_set ds(n);
-      for(auto it : connections){
-        int u = it[0];
-        int v = it[1];
-        ds.union_it(u , v);
-      }
-      int ans = 0;
-      set<int> st;
-      for(int i = 0 ; i < n ; i++){
-        st.insert(ds.find_par(i));
-      }  
-      ans = st.size();
-      return ans - 1;
+
+        if(connections.size() < n - 1)
+            return -1;
+
+        disjoint_set ds(n);
+
+        for(auto &it : connections){
+            ds.union_it(it[0], it[1]);
+        }
+
+        int components = 0;
+
+        for(int i = 0; i < n; i++){
+            if(ds.find_par(i) == i)
+                components++;
+        }
+
+        return components - 1;
     }
 };
