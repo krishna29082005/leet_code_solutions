@@ -45,7 +45,7 @@ public:
 
         disjoint_set ds(n);
 
-        for(auto &it : connections){
+        for(auto it : connections){
             ds.union_it(it[0], it[1]);
         }
 
