@@ -57,9 +57,11 @@ class Solution {
 private:
     int timer = 1;
     void dfs(int node , int parent , vector<int> &vis , vector<vector<int>> & adj , int tim[] , int low[] , vector<vector<int>>& bridges){
+        if(vis[node] == 1) return;
         vis[node] = 1;
         tim[node] = low[node] = timer;
         timer++;
+    
         for(auto it : adj[node]){
             if(it == parent) continue;
             if(vis[it] == 0){
@@ -69,7 +71,6 @@ private:
                   bridges.push_back({it , node});
                }
             } 
-            
                 low[node] = min(low[node] , low[it]);
             
         }
