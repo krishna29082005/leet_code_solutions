@@ -98,9 +98,9 @@ public:
                 mx = max(mx , sum + 1);
             }
         }
-        for(int i = 0 ; i < n ; i++){
-            mx = max(mx , ds.size[ds.find_par(i)]);
-        }
+        
+            mx = max(mx , ds.size[ds.find_par(0)]);
+        
         return mx;
     }
 };
