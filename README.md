@@ -132,6 +132,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/krishna29082005/leet_code_solutions/tree/master/0070-climbing-stairs) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0542-01-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0542-01-matrix) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/krishna29082005/leet_code_solutions/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -289,4 +290,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1192-critical-connections-in-a-network](https://github.com/krishna29082005/leet_code_solutions/tree/master/1192-critical-connections-in-a-network) |
+## Math
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/krishna29082005/leet_code_solutions/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/krishna29082005/leet_code_solutions/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
