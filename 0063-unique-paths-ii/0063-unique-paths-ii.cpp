@@ -5,7 +5,8 @@ public:
         int m = obstacleGrid.size();
         int n = obstacleGrid[0].size();
         vector<int>dp(n , -1);
-        if(m == 1 && n == 1 && obstacleGrid[0][0] != 1) return 1;
+        if (obstacleGrid[0][0] == 1)
+           return 0;
         dp[0] = 1;
         for(int i = 0 ; i < m ; i++){
             vector<int> temp(n);
