@@ -13,7 +13,7 @@ public:
 
                 if(obstacleGrid[i][j] == 1) 
                 {
-                    dp[j] = 0;
+                    temp[j] = 0;
                     continue;
                 }
                 if(i == 0 && j == 0) 
