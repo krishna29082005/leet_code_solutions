@@ -11,8 +11,11 @@ public:
             vector<int> temp(n);
             for(int j = 0 ; j < n ; j++){
 
-                if(obstacleGrid[i][j] == 1) continue;
-
+                if(obstacleGrid[i][j] == 1) 
+                {
+                    dp[j] = 0;
+                    continue;
+                }
                 if(i == 0 && j == 0) 
                 {
                     temp[j] = 1;
@@ -21,11 +24,11 @@ public:
                 
                 int up = 0;
                 int left = 0;
-                if(i - 1 >= 0 && i - 1 < m && obstacleGrid[i-1][j] != 1) // going up
+                if(i - 1 >= 0 && i - 1 < m ) // going up
                 {
                     up = dp[j];
                 }
-               if(j - 1 >= 0 && j - 1 < n && obstacleGrid[i][j-1] != 1) // going left
+               if(j - 1 >= 0 && j - 1 < n ) // going left
                 {
                     left = temp[j - 1];
                 } 
