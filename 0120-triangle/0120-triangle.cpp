@@ -5,11 +5,17 @@ public:
     int minimumTotal(vector<vector<int>>& triangle) {
 
         int m = triangle.size();
-        vector<vector<int>> dp(m , vector<int>(m , -1));
-        dp[0][0] = triangle[0][0];
+        vector<int> dp(m);
+        dp[0] = triangle[0][0];
 
         for(int i = 0 ; i < m ; i++){
-            if(i == 0) continue;
+            vector<int> temp(m);
+            if(i == 0) 
+            {
+                temp[i] = 0;
+                continue;
+            }
+            
             int sizein = triangle[i].size();
             for(int j = 0 ; j < sizein ; j++){
                 
@@ -18,20 +24,22 @@ public:
                 int a1 = 1e9;
 
                 if(j >= 0 && j < i)
-                a0 = triangle[i][j] + dp[i - 1][j];
+                a0 = triangle[i][j] + dp[j];
 
                 if(j - 1 >= 0 && j - 1 < i)
-                a1 = triangle[i][j] + dp[i - 1][j - 1];
+                a1 = triangle[i][j] + dp[j - 1];
 
                 mini = min(a0 , a1);
 
-                dp[i][j] = mini;
+                temp[j] = mini;
             }
+            dp = temp;
         }
         int mini = INT_MAX;
-        for(int j = 0; j < triangle[m - 1].size() ; j++)
-        mini = min(mini, dp[m - 1][j]);
-
+        for(int j = 0; j < m ; j++)
+        {
+        mini = min(mini, dp[j]);
+        }
         return mini;
     }
 };
