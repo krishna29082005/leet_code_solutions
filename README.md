@@ -143,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0542-01-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0542-01-matrix) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/krishna29082005/leet_code_solutions/tree/master/0787-cheapest-flights-within-k-stops) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/krishna29082005/leet_code_solutions/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+| [1463-cherry-pickup-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/1463-cherry-pickup-ii) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/krishna29082005/leet_code_solutions/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Hash Table
 |  |
@@ -198,6 +199,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1020-number-of-enclaves](https://github.com/krishna29082005/leet_code_solutions/tree/master/1020-number-of-enclaves) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/1091-shortest-path-in-binary-matrix) |
+| [1463-cherry-pickup-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/1463-cherry-pickup-ii) |
 | [1631-path-with-minimum-effort](https://github.com/krishna29082005/leet_code_solutions/tree/master/1631-path-with-minimum-effort) |
 ## Divide and Conquer
 |  |
@@ -278,6 +280,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0994-rotting-oranges](https://github.com/krishna29082005/leet_code_solutions/tree/master/0994-rotting-oranges) |
 | [1020-number-of-enclaves](https://github.com/krishna29082005/leet_code_solutions/tree/master/1020-number-of-enclaves) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/1091-shortest-path-in-binary-matrix) |
+| [1463-cherry-pickup-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/1463-cherry-pickup-ii) |
 | [1631-path-with-minimum-effort](https://github.com/krishna29082005/leet_code_solutions/tree/master/1631-path-with-minimum-effort) |
 ## Topological Sort
 |  |
