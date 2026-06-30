@@ -160,6 +160,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Binary Search Tree
@@ -194,6 +195,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0213-house-robber-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0213-house-robber-ii) |
 | [0416-partition-equal-subset-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0416-partition-equal-subset-sum) |
+| [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0542-01-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0542-01-matrix) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
 | [0827-making-a-large-island](https://github.com/krishna29082005/leet_code_solutions/tree/master/0827-making-a-large-island) |
@@ -241,6 +243,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/krishna29082005/leet_code_solutions/tree/master/0653-two-sum-iv-input-is-a-bst) |
 ## Union-Find
 |  |
@@ -321,4 +324,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/krishna29082005/leet_code_solutions/tree/master/0062-unique-paths) |
+## Greedy
+|  |
+| ------- |
+| [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 <!---LeetCode Topics End-->
