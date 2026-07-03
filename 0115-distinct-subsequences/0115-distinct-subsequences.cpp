@@ -1,22 +1,26 @@
 class Solution {
 public:
-    int f(int i , int j , string &s , string& t , vector<vector<int>>&dp){
-        if(j < 0) return 1;
-        if(i < 0 && j >= 0) return 0;
-        if(dp[i][j] != -1) return dp[i][j];
-        if(s[i] == t[j]){
-            int pick = f(i - 1 , j - 1 , s , t , dp);
-            int nonpick = f(i - 1 , j , s , t , dp);
-            return dp[i][j] =  pick + nonpick;
-        }
-        return dp[i][j] = f(i - 1 , j , s , t , dp);
-        
-    }
+    
     int numDistinct(string s, string t) {
         int m = s.size();
         int n = t.size();
-        vector<vector<int>>dp(s.size() , vector<int>(t.size() , -1));
-        int ans = f(m - 1 , n - 1 , s , t , dp);
-        return ans;
+        vector<vector<unsigned long long>>dp(s.size() + 1, vector<unsigned long long>(t.size() + 1, -1));
+        for(int i = 0 ; i < m + 1 ; i++){
+            dp[i][0] = 1;
+        }
+        for(int i = 1 ; i < n + 1 ; i++){
+            dp[0][i] = 0;
+        }
+        for(int i = 1 ; i < m + 1  ; i++){
+            for(int j = 1 ; j < n + 1 ; j++){
+                if(s[i - 1] == t[j - 1]){
+                    dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
+                }
+                else{
+                    dp[i][j] = dp[i - 1][j];
+                }
+            }
+        }
+        return (int)dp[m][n];
     }
 };
