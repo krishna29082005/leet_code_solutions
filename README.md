@@ -144,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0322-coin-change](https://github.com/krishna29082005/leet_code_solutions/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0416-partition-equal-subset-sum) |
 | [0494-target-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0494-target-sum) |
+| [0516-longest-palindromic-subsequence](https://github.com/krishna29082005/leet_code_solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0542-01-matrix) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/krishna29082005/leet_code_solutions/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -222,6 +223,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0127-word-ladder](https://github.com/krishna29082005/leet_code_solutions/tree/master/0127-word-ladder) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0516-longest-palindromic-subsequence](https://github.com/krishna29082005/leet_code_solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
 ## Design
 |  |
