@@ -148,6 +148,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0518-coin-change-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0542-01-matrix) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/krishna29082005/leet_code_solutions/tree/master/0787-cheapest-flights-within-k-stops) |
+| [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/krishna29082005/leet_code_solutions/tree/master/1312-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/krishna29082005/leet_code_solutions/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1463-cherry-pickup-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/1463-cherry-pickup-ii) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/krishna29082005/leet_code_solutions/tree/master/1976-number-of-ways-to-arrive-at-destination) |
@@ -225,6 +226,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0516-longest-palindromic-subsequence](https://github.com/krishna29082005/leet_code_solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
+| [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/krishna29082005/leet_code_solutions/tree/master/1312-minimum-insertion-steps-to-make-a-string-palindrome) |
 ## Design
 |  |
 | ------- |
