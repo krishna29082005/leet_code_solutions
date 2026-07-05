@@ -1,28 +1,28 @@
 class Solution {
 public:
-    int f(int day , int buy , vector<int>& prices , vector<vector<int>>&dp , int fee){
-        if(day == prices.size()) return 0;
-        if(dp[day][buy] != -1)return dp[day][buy];
-        if(buy){
-            int wbuy = -prices[day] + f(day + 1 , 0 , prices , dp , fee);
-
-            int nbuy = 0 + f(day + 1 , 1 , prices , dp , fee);
-            return dp[day][buy] = max(wbuy , nbuy);
-        }else{
-            int wsell = prices[day] - fee + f(day + 1 , 1 , prices , dp , fee);
-
-            int nsell = 0 + f(day + 1  , 0 , prices , dp , fee);
-            return dp[day][buy] = max(wsell , nsell);
-        }
-        return dp[day][buy] = 0;
-    }
+    
     int maxProfit(vector<int>& prices, int fee) {
         
         int n = prices.size();
-        vector<vector<int>>dp(n , vector<int>(2 , -1));
-        
-        int ans = f(0 , 1 , prices , dp , fee);
-        return ans;
+        vector<vector<int>>dp(n + 1 , vector<int>(2 , -1));
+        for(int i = 0 ; i < 2 ; i++){
+            dp[n][i] = 0;
+        }
+        for(int i = n - 1 ; i >= 0  ; i--){
+            for(int j = 0 ; j < 2 ; j++){
+                if(j == 1){
+                    int buy = -prices[i] + dp[i + 1][0];
+                    int nbuy = dp[i + 1][1];
+                    dp[i][j] = max(buy , nbuy);
+                }
+                else{
+                    int sell = prices[i] - fee +  dp[i + 1][1];
+                    int nsell = 0 + dp[i + 1][0];
+                    dp[i][j] = max(sell , nsell);
+                }
+            }
+        }
+        return dp[0][1];
     }
     
 };
