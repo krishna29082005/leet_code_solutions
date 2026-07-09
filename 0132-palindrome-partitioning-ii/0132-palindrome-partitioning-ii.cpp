@@ -10,22 +10,19 @@ public:
         }
         return true;
     }
-    int f(int i , string &s , vector<int>&dp){
-        if(i == s.size()) return 0;
-         
-        if(dp[i] != -1) return dp[i]; 
-        int mini = INT_MAX;
-        for(int k = i ; k < s.size() ; k++)
-        {
-            if(check(i , k , s)){
-                mini = min(mini , 1 + f(k + 1 , s , dp));
-            }
-        }
-        return dp[i] = mini;
-    }
+    
     int minCut(string s) {
-        vector<int>dp(s.size() , -1);
-        int ans = f(0 , s , dp);
-        return ans - 1;
+        int n = s.size();
+        vector<int>dp(s.size() + 1, 0);
+        for(int i = n - 1; i >= 0; i--){
+            int mini = INT_MAX;
+            for(int k = i ; k < n ; k++){
+               if(check(i , k , s)){
+                mini = min(mini , 1 + dp[k + 1]);
+               }
+            }
+            dp[i] = mini;
+        }
+        return dp[0] - 1;
     }
 };
