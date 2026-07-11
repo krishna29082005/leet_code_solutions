@@ -272,6 +272,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
+| [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Stack
 |  |
@@ -279,6 +280,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0094-binary-tree-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0094-binary-tree-inorder-traversal) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/krishna29082005/leet_code_solutions/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
+| [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 | [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 ## Linked List
 |  |
@@ -402,4 +404,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/krishna29082005/leet_code_solutions/tree/master/0673-number-of-longest-increasing-subsequence) |
+## Queue
+|  |
+| ------- |
+| [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 <!---LeetCode Topics End-->
