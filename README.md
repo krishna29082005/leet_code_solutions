@@ -272,6 +272,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/krishna29082005/leet_code_solutions/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
 | [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/krishna29082005/leet_code_solutions/tree/master/0232-implement-queue-using-stacks) |
@@ -282,6 +283,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/krishna29082005/leet_code_solutions/tree/master/0020-valid-parentheses) |
 | [0094-binary-tree-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0094-binary-tree-inorder-traversal) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/krishna29082005/leet_code_solutions/tree/master/0114-flatten-binary-tree-to-linked-list) |
+| [0155-min-stack](https://github.com/krishna29082005/leet_code_solutions/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
 | [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/krishna29082005/leet_code_solutions/tree/master/0232-implement-queue-using-stacks) |
