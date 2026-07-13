@@ -23,11 +23,9 @@ public:
         }
         
         reverse(ans.begin() , ans.end());
-        int i = 0;
-        while(true){
-            if(ans[i] != '0') break;
-            else ans.erase(i , 1);
-        }
+        while(!ans.empty() && ans[0] == '0')
+        ans.erase(0,1);
+        
         if(ans.empty()){
             return "0";
         }
