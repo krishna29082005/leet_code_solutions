@@ -272,6 +272,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0127-word-ladder](https://github.com/krishna29082005/leet_code_solutions/tree/master/0127-word-ladder) |
 | [0132-palindrome-partitioning-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0132-palindrome-partitioning-ii) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0297-serialize-and-deserialize-binary-tree) |
+| [0402-remove-k-digits](https://github.com/krishna29082005/leet_code_solutions/tree/master/0402-remove-k-digits) |
 | [0516-longest-palindromic-subsequence](https://github.com/krishna29082005/leet_code_solutions/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/krishna29082005/leet_code_solutions/tree/master/0583-delete-operation-for-two-strings) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
@@ -297,6 +298,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
 | [0225-implement-stack-using-queues](https://github.com/krishna29082005/leet_code_solutions/tree/master/0225-implement-stack-using-queues) |
 | [0232-implement-queue-using-stacks](https://github.com/krishna29082005/leet_code_solutions/tree/master/0232-implement-queue-using-stacks) |
+| [0402-remove-k-digits](https://github.com/krishna29082005/leet_code_solutions/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/krishna29082005/leet_code_solutions/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0503-next-greater-element-ii) |
 | [0735-asteroid-collision](https://github.com/krishna29082005/leet_code_solutions/tree/master/0735-asteroid-collision) |
@@ -311,6 +313,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/krishna29082005/leet_code_solutions/tree/master/0042-trapping-rain-water) |
+| [0402-remove-k-digits](https://github.com/krishna29082005/leet_code_solutions/tree/master/0402-remove-k-digits) |
 | [0496-next-greater-element-i](https://github.com/krishna29082005/leet_code_solutions/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0503-next-greater-element-ii) |
 | [0907-sum-of-subarray-minimums](https://github.com/krishna29082005/leet_code_solutions/tree/master/0907-sum-of-subarray-minimums) |
@@ -413,6 +416,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0044-wildcard-matching](https://github.com/krishna29082005/leet_code_solutions/tree/master/0044-wildcard-matching) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0402-remove-k-digits](https://github.com/krishna29082005/leet_code_solutions/tree/master/0402-remove-k-digits) |
 | [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/krishna29082005/leet_code_solutions/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 ## Backtracking
