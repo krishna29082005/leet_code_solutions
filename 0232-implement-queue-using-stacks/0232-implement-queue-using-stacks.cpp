@@ -12,32 +12,37 @@ public:
     }
     
     int pop() {
-        int x = st.top();
-        st.pop();
+           int x = st.top();
+           st.pop();
 
-        if(st.empty())return x;
+           if(st.empty()) return x;
 
-        int ans = pop();
-        st.push(x);
-        return  ans;       
+           int ans = pop();
+
+           st.push(x);
+           return ans;
     }
     
     int peek() {
-        int x = st.top();
-        st.pop();
+         int x = st.top();
+           st.pop();
 
-        if(st.empty()){
+           if(st.empty())
+           {
             st.push(x);
             return x;
-        }
 
-        int ans = peek();
-        st.push(x);
-        return  ans;
+           }
+           int ans = peek();
+
+           st.push(x);
+           return ans;
     }
     
     bool empty() {
-        return st.empty();
+        if(st.empty()) return true;
+
+        return false;
     }
 };
 
