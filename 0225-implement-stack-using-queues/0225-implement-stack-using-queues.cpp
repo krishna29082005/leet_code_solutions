@@ -8,44 +8,36 @@ public:
     
     void push(int x) {
        q1.push(x);
+       int n = q1.size();
+       for(int i = 0 ; i < n - 1 ; i++){
+          int temp = q1.front();
+          q1.pop();
+          q1.push(temp);
+       }
     }
     
     int pop() {
-       if(q1.empty()) return -1;
-       else{
-        int n = q1.size();
-        for(int i = 0 ; i < n - 1 ; i++){
-            q2.push(q1.front());
-            q1.pop();
-        }
-        int temp = q1.front();
-        q1.pop();
-        swap(q1 , q2);
-        return temp;
+        if(q1.empty()) return -1;
+       int temp = q1.front();
+       q1.pop();
+       return temp;
        }
-    }
+    
     
     int top() {
        if(q1.empty()) return -1;
-       else{
-        int n = q1.size();
-        for(int i = 0 ; i < n - 1 ; i++){
-            q2.push(q1.front());
-            q1.pop();
-        }
-        int temp = q1.front();
-        q1.pop();
-        swap(q1 , q2);
-        q1.push(temp);
-        return temp;
+       int temp = q1.front();
+       
+       return temp;
        }
-    }
+    
     
     bool empty() {
        if(q1.empty()) return true;
 
        return false; 
     }
+    
 };
 
 /**
