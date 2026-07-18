@@ -1,41 +1,53 @@
 class Solution {
 public:
-    int largestRectangleArea(vector<int>& heights) {
-        int n = heights.size();
-        vector<int>pse(n); 
+     vector<int>nextsmall(vector<int>& arr){
+        int n = arr.size();
         stack<int>st;
-        for(int i = 0 ; i < n ; i++){
-           
-            while(!st.empty() && heights[st.top()] > heights[i]){
-                st.pop();
+        vector<int>ns(n);
+        for(int i = n - 1; i >= 0 ; i--){
+            while(!st.empty() && arr[st.top()] >= arr[i]){
+               st.pop();
             }
             if(st.empty()){
-                pse[i] = -1;
+                ns[i] = n;
                 st.push(i);
-            }else{
-                pse[i] = st.top();
+            }
+            else{
+                ns[i] = st.top();
                 st.push(i);
             }
         }
-        stack<int>st1;
-        vector<int>nse(n);
-        
-        for(int i = n - 1; i >= 0 ; i--){
-            
-            while(!st1.empty() && heights[st1.top()] >= heights[i]){
-                st1.pop();
-            }
-            if(st1.empty()){
-                nse[i] = n;
-                st1.push(i);
-            }else{
-                nse[i] = st1.top();
-                st1.push(i);
-            }
-        }
-        int maxi = INT_MIN;
+        return ns;
+    }
+
+    vector<int>prevsmall(vector<int>& arr){
+        int n = arr.size();
+        stack<int>st;
+        vector<int>ps(n);
         for(int i = 0 ; i < n ; i++){
-            int wid = nse[i] - pse[i] - 1;
+            while(!st.empty() && arr[st.top()] >= arr[i]){
+               st.pop();
+            }
+            if(st.empty()){
+                ps[i] = -1;
+                st.push(i);
+            }
+            else{
+                ps[i] = st.top();
+                st.push(i);
+            }
+        }
+        return ps;
+    }
+    int largestRectangleArea(vector<int>& heights) {
+        int n = heights.size();
+        vector<int>ps = prevsmall(heights);
+        vector<int>ns = nextsmall(heights);
+        int maxi = 0;
+        for(int i = 0 ; i < n ; i++){
+            int ls = ps[i];
+            int rs = ns[i];
+            int wid = rs - ls - 1;
             int area = heights[i]*wid;
             maxi = max(maxi , area);
         }
