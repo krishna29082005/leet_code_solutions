@@ -13,26 +13,17 @@ public:
         }
         if(st.empty()){
            if(ci == 0){
-
-            st.push({price , ci});
             ans = 1;
-            ci++;
-            
-
            }else{
-            
-            st.push({price , ci});
             ans = ci + 1;
-            ci++;
-            
            }
         }else{
             int pi = st.top().second;
-            st.push({price , ci});
             ans = ci - pi;
-            ci++;
 
         }
+        st.push({price , ci});
+        ci++;
         return ans;
     }
 };
