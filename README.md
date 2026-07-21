@@ -414,6 +414,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0007-reverse-integer](https://github.com/krishna29082005/leet_code_solutions/tree/master/0007-reverse-integer) |
+| [0009-palindrome-number](https://github.com/krishna29082005/leet_code_solutions/tree/master/0009-palindrome-number) |
 | [0062-unique-paths](https://github.com/krishna29082005/leet_code_solutions/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/krishna29082005/leet_code_solutions/tree/master/0070-climbing-stairs) |
 | [0368-largest-divisible-subset](https://github.com/krishna29082005/leet_code_solutions/tree/master/0368-largest-divisible-subset) |
