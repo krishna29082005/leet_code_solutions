@@ -236,6 +236,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0213-house-robber-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0213-house-robber-ii) |
 | [0239-sliding-window-maximum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0239-sliding-window-maximum) |
+| [0283-move-zeroes](https://github.com/krishna29082005/leet_code_solutions/tree/master/0283-move-zeroes) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/krishna29082005/leet_code_solutions/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0312-burst-balloons](https://github.com/krishna29082005/leet_code_solutions/tree/master/0312-burst-balloons) |
 | [0322-coin-change](https://github.com/krishna29082005/leet_code_solutions/tree/master/0322-coin-change) |
@@ -344,6 +345,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0026-remove-duplicates-from-sorted-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0042-trapping-rain-water](https://github.com/krishna29082005/leet_code_solutions/tree/master/0042-trapping-rain-water) |
 | [0189-rotate-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0189-rotate-array) |
+| [0283-move-zeroes](https://github.com/krishna29082005/leet_code_solutions/tree/master/0283-move-zeroes) |
 | [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/krishna29082005/leet_code_solutions/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [1048-longest-string-chain](https://github.com/krishna29082005/leet_code_solutions/tree/master/1048-longest-string-chain) |
