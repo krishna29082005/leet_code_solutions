@@ -181,6 +181,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0127-word-ladder](https://github.com/krishna29082005/leet_code_solutions/tree/master/0127-word-ladder) |
+| [0229-majority-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0229-majority-element-ii) |
 | [0496-next-greater-element-i](https://github.com/krishna29082005/leet_code_solutions/tree/master/0496-next-greater-element-i) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/krishna29082005/leet_code_solutions/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
@@ -191,6 +192,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0229-majority-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0229-majority-element-ii) |
 | [0368-largest-divisible-subset](https://github.com/krishna29082005/leet_code_solutions/tree/master/0368-largest-divisible-subset) |
 | [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
 | [0721-accounts-merge](https://github.com/krishna29082005/leet_code_solutions/tree/master/0721-accounts-merge) |
@@ -238,6 +240,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0198-house-robber](https://github.com/krishna29082005/leet_code_solutions/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
 | [0213-house-robber-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0213-house-robber-ii) |
+| [0229-majority-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0229-majority-element-ii) |
 | [0239-sliding-window-maximum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0239-sliding-window-maximum) |
 | [0283-move-zeroes](https://github.com/krishna29082005/leet_code_solutions/tree/master/0283-move-zeroes) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/krishna29082005/leet_code_solutions/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
@@ -489,4 +492,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0901-online-stock-span](https://github.com/krishna29082005/leet_code_solutions/tree/master/0901-online-stock-span) |
+## Counting
+|  |
+| ------- |
+| [0229-majority-element-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0229-majority-element-ii) |
 <!---LeetCode Topics End-->
