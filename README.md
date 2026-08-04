@@ -148,6 +148,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0132-palindrome-partitioning-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0132-palindrome-partitioning-ii) |
+| [0152-maximum-product-subarray](https://github.com/krishna29082005/leet_code_solutions/tree/master/0152-maximum-product-subarray) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/krishna29082005/leet_code_solutions/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/krishna29082005/leet_code_solutions/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0213-house-robber-ii) |
@@ -238,6 +239,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
+| [0152-maximum-product-subarray](https://github.com/krishna29082005/leet_code_solutions/tree/master/0152-maximum-product-subarray) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/krishna29082005/leet_code_solutions/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0189-rotate-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0189-rotate-array) |
 | [0198-house-robber](https://github.com/krishna29082005/leet_code_solutions/tree/master/0198-house-robber) |
