@@ -461,6 +461,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0007-reverse-integer](https://github.com/krishna29082005/leet_code_solutions/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/krishna29082005/leet_code_solutions/tree/master/0009-palindrome-number) |
 | [0048-rotate-image](https://github.com/krishna29082005/leet_code_solutions/tree/master/0048-rotate-image) |
+| [0050-powx-n](https://github.com/krishna29082005/leet_code_solutions/tree/master/0050-powx-n) |
 | [0062-unique-paths](https://github.com/krishna29082005/leet_code_solutions/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/krishna29082005/leet_code_solutions/tree/master/0070-climbing-stairs) |
 | [0189-rotate-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0189-rotate-array) |
@@ -491,6 +492,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/krishna29082005/leet_code_solutions/tree/master/0044-wildcard-matching) |
+| [0050-powx-n](https://github.com/krishna29082005/leet_code_solutions/tree/master/0050-powx-n) |
 | [0509-fibonacci-number](https://github.com/krishna29082005/leet_code_solutions/tree/master/0509-fibonacci-number) |
 ## Binary Indexed Tree
 |  |
