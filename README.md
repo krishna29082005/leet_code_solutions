@@ -216,6 +216,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search Tree
 |  |
 | ------- |
+| [0074-search-a-2d-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0074-search-a-2d-matrix) |
 | [0098-validate-binary-search-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0098-validate-binary-search-tree) |
 | [0099-recover-binary-search-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0099-recover-binary-search-tree) |
 | [0173-binary-search-tree-iterator](https://github.com/krishna29082005/leet_code_solutions/tree/master/0173-binary-search-tree-iterator) |
@@ -244,6 +245,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0053-maximum-subarray](https://github.com/krishna29082005/leet_code_solutions/tree/master/0053-maximum-subarray) |
 | [0063-unique-paths-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0064-minimum-path-sum) |
+| [0074-search-a-2d-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0074-search-a-2d-matrix) |
 | [0084-largest-rectangle-in-histogram](https://github.com/krishna29082005/leet_code_solutions/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/krishna29082005/leet_code_solutions/tree/master/0085-maximal-rectangle) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -416,6 +418,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/krishna29082005/leet_code_solutions/tree/master/0048-rotate-image) |
 | [0063-unique-paths-ii](https://github.com/krishna29082005/leet_code_solutions/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0064-minimum-path-sum) |
+| [0074-search-a-2d-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0074-search-a-2d-matrix) |
 | [0085-maximal-rectangle](https://github.com/krishna29082005/leet_code_solutions/tree/master/0085-maximal-rectangle) |
 | [0130-surrounded-regions](https://github.com/krishna29082005/leet_code_solutions/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/krishna29082005/leet_code_solutions/tree/master/0200-number-of-islands) |
