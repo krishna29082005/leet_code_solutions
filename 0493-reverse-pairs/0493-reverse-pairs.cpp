@@ -30,7 +30,7 @@ public:
     void countpair(vector<int>& nums , int l , int mid , int r , long long & cnt){
         int j = mid + 1;
            for(int i = l ; i <= mid ; i++){
-            while(j <= r && nums[i] > 2LL * nums[j]){
+            while(j <= r && nums[i] > 2LL*nums[j]){
                j++;
             }
             cnt += j - (mid + 1);
