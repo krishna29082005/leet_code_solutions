@@ -9,36 +9,40 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class BSTiterator{
-    public:
-
+class bstiterator{
+    private:
     stack<TreeNode*> st;
-    bool reverse = true;
+    bool isreverse = true;
 
-    
-    BSTiterator(TreeNode* root , bool isreverse){
-        reverse = isreverse;
+    public:
+    bstiterator(TreeNode* root , bool flag){
+        isreverse = flag;
         push_all(root);
     }
-    
+
     int next(){
-        TreeNode* temp = st.top();
+        auto it = st.top();
         st.pop();
-        if(reverse == true)
-            push_all(temp -> left);
-        else
-            push_all(temp -> right);
-        
-        return temp -> val;
+
+        if(isreverse) push_all(it -> left);
+        else push_all(it -> right); 
+
+        return it -> val;
     }
 
+    bool hasnext(){
+        if(st.empty()) return false;
+        else return true;
+    }
 
-private: 
-    void push_all(TreeNode* root){
+    void push_all(TreeNode* root)
+    {
         while(root != NULL){
-        st.push(root);
-        if(reverse == true) root = root -> right;
-        else root = root -> left;
+
+            st.push(root);
+
+            if(isreverse) root = root -> right;
+            else root = root -> left;
         }
     }
 };
@@ -46,16 +50,16 @@ class Solution {
 public:
     
     bool findTarget(TreeNode* root, int k) {
-        if(root == NULL) return false;
-        BSTiterator  l (root , false);
-        BSTiterator  r (root , true);
+        bstiterator l(root , false);
+        bstiterator r(root , true);
+        
         int i = l.next();
-        int j = r.next();  
-        while(i < j)  {
-        if(i + j == k) return true;
-        else if(i + j < k) i =  l.next();
-        else j = r.next();
-        }  
-        return false; 
+        int j = r.next();
+        while(i < j){
+            if(i + j == k) return true;
+            else if(i + j < k) i = l.next();
+            else j = r.next();
+        }
+        return false;
     }
 };
