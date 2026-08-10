@@ -216,6 +216,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Search Tree
 |  |
 | ------- |
+| [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0074-search-a-2d-matrix](https://github.com/krishna29082005/leet_code_solutions/tree/master/0074-search-a-2d-matrix) |
 | [0098-validate-binary-search-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0098-validate-binary-search-tree) |
 | [0099-recover-binary-search-tree](https://github.com/krishna29082005/leet_code_solutions/tree/master/0099-recover-binary-search-tree) |
@@ -241,6 +242,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0018-4sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0042-trapping-rain-water](https://github.com/krishna29082005/leet_code_solutions/tree/master/0042-trapping-rain-water) |
 | [0048-rotate-image](https://github.com/krishna29082005/leet_code_solutions/tree/master/0048-rotate-image) |
 | [0053-maximum-subarray](https://github.com/krishna29082005/leet_code_solutions/tree/master/0053-maximum-subarray) |
