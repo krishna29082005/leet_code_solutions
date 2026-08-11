@@ -1,63 +1,43 @@
 class Solution {
-public:
-    TreeNode *first = NULL, *middle = NULL;
-    TreeNode *last = NULL, *prev = NULL;
+private:
+TreeNode* first = NULL;
+TreeNode* middle = NULL;
+TreeNode* last = NULL;
+TreeNode* prev = NULL;
+    
+    void inorder(TreeNode* root){
+        stack<TreeNode*>st;
+        while(true){
 
-    void inorderTraversal(TreeNode* root) {
-
-        TreeNode* cur = root;
-
-        while (cur) {
-
-            if (cur->left == NULL) {
-
-                if (prev && cur->val < prev->val) {
-                    if (first == NULL) {
-                        first = prev;
-                        middle = cur;
-                    } else {
-                        last = cur;
-                    }
-                }
-
-                prev = cur;
-                cur = cur->right;
+            if(root != NULL){
+               st.push(root);
+               root = root -> left;
             }
-            else {
-
-                TreeNode* pred = cur->left;
-
-                while (pred->right && pred->right != cur)
-                    pred = pred->right;
-
-                if (pred->right == NULL) {
-                    pred->right = cur;
-                    cur = cur->left;
-                }
-                else {
-
-                    pred->right = NULL;
-
-                    if (prev && cur->val < prev->val) {
-                        if (first == NULL) {
-                            first = prev;
-                            middle = cur;
-                        } else {
-                            last = cur;
-                        }
+            else{
+                if(st.empty()) break;
+                root = st.top();
+                st.pop();
+                
+                if(prev && root -> val < prev -> val){
+                    if(first == NULL){
+                        first = prev;
+                        middle = root;
+                    }else{
+                        last = root;
                     }
-
-                    prev = cur;
-                    cur = cur->right;
                 }
+                prev = root;
+                root = root -> right;
             }
         }
-    }
 
+    }
+public:
+    
     void recoverTree(TreeNode* root) {
 
-        inorderTraversal(root);
-
+        inorder(root);
+        
         if (first && last)
             swap(first->val, last->val);
         else if (first && middle)
