@@ -1,38 +1,35 @@
+class info{
+    public:
+      int minnode;
+      int maxnode;
+      int sum;
 
-
+      info(int minnode , int maxnode , int sum){
+        this -> minnode = minnode;
+        this -> maxnode = maxnode;
+        this -> sum = sum;
+      }
+};
 class Solution {
 public:
-    struct info{
-        bool isbst;
-        long long sum;
-        int mn;
-        int mx;
-        info(bool bst , long long s , int min , int max){
-            isbst = bst;
-            sum = s;
-            mn = min;
-            mx = max;
-        }
-    };
-
     info helper(TreeNode* root , long long& maxi){
         if(root == NULL){
-            return info(true , 0 , INT_MAX , INT_MIN);
+            return info(INT_MAX , INT_MIN , 0);
         }
 
 
         info lh = helper(root -> left , maxi);
         info rh = helper(root -> right , maxi);
          
-        if(lh.isbst && rh.isbst && root -> val > lh.mx && root -> val < rh.mn){
+        if(root -> val > lh.maxnode && root -> val < rh.minnode){
         
         long long sum = root -> val + lh.sum + rh.sum;
         maxi = max(maxi , sum);
-        int mn = min(root -> val , lh.mn);
-        int mx = max(root -> val , rh.mx);
-        return info(true , sum , mn , mx);
+        int mn = min(root -> val , lh.minnode);
+        int mx = max(root -> val , rh.maxnode);
+        return info(mn , mx , sum);
         }
-        return info(false, 0, INT_MIN, INT_MAX);
+        return info(INT_MIN, INT_MAX ,0);
     }
 
     int maxSumBST(TreeNode* root) {
