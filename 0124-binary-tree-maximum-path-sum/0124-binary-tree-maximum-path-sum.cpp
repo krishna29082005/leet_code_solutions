@@ -14,25 +14,21 @@
 class Solution {
 public:
 
-    int maxi = INT_MIN;
+    int helper(TreeNode* root , int& maxi){
+        if(root == NULL) return 0;
 
-    int solve(TreeNode* root)
-    {
-        if(root == NULL)
-            return 0;
+        int lh = max(0 , helper(root -> left , maxi));
+        int rh = max(0 , helper(root -> right , maxi));
 
-        int lh = max(0, solve(root->left));
-        int rh = max(0, solve(root->right));
-
-        maxi = max(maxi, root->val + lh + rh);
-
-        return root->val + max(lh, rh);
+        maxi = max(maxi , root -> val + lh + rh);
+        
+        return root -> val + max(lh , rh);
     }
 
     int maxPathSum(TreeNode* root)
     {
-        solve(root);
-
+        int maxi = INT_MIN;
+        helper(root , maxi);
         return maxi;
     }
 };
