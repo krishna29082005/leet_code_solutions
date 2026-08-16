@@ -197,6 +197,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0001-two-sum) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/krishna29082005/leet_code_solutions/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0127-word-ladder](https://github.com/krishna29082005/leet_code_solutions/tree/master/0127-word-ladder) |
@@ -248,6 +249,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/krishna29082005/leet_code_solutions/tree/master/0018-4sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/krishna29082005/leet_code_solutions/tree/master/0026-remove-duplicates-from-sorted-array) |
