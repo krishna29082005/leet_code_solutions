@@ -11,17 +11,16 @@
  */
 class Solution {
 public:
-    bool issame(TreeNode* p ,TreeNode* q)
-    {
+    bool helper(TreeNode* p , TreeNode* q){
         if(p == NULL && q == NULL) return true;
         if(p == NULL || q == NULL) return false;
-        if(p -> val != q -> val)return false;
-        return issame(p -> left , q -> right)&&issame(p -> right , q -> left);
+        if(p -> val != q -> val) return false;
+        return helper(p -> left , q -> right) && helper(p -> right , q -> left);
     }
     bool isSymmetric(TreeNode* root) {
-        TreeNode* p = root -> left;
-        TreeNode* q = root -> right;
-        
-        return issame(p , q);
+       if(root == NULL) return true;
+       TreeNode* p = root -> left;
+       TreeNode* q = root -> right;
+       return helper(p , q);
     }
 };
