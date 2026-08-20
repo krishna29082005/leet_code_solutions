@@ -11,31 +11,31 @@
  */
 class Solution {
 public:
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        map<int , int> inmap;
-        for(int i = 0 ; i < inorder.size() ; i++)
-        {
-            inmap[inorder[i]] = i;
-        }
-        TreeNode* root = bt(preorder , 0 , preorder.size() - 1,
-                            inorder , 0 , inorder.size() - 1, inmap);
-        return root;
-    }
-    TreeNode* bt(vector<int> &preorder , int ps , int pe ,
-                 vector<int> &inorder , int is , int ie , map<int , int> &inmap)
-                 {
-                    if(ps > pe || is > ie) return NULL;
+    TreeNode* bt(vector<int>& preor , int ps , int pe , 
+                 vector<int>& inor , int is , int ie , map<int , int>& inmap){
 
-                    TreeNode* root = new TreeNode(preorder[ps]);
+                    if(is > ie || ps > pe) return NULL;
 
+                    TreeNode* root = new TreeNode(preor[ps]);
+                    
                     int inroot = inmap[root -> val];
                     int numl = inroot - is;
 
-                    root -> left = bt(preorder , ps + 1 , ps + numl,
-                                      inorder , is , inroot - 1 , inmap);
-
-                    root -> right = bt(preorder , ps + numl + 1 , pe,
-                                       inorder , inroot + 1 , ie , inmap);
+                    root -> left = bt(preor , ps + 1 , ps + numl , inor
+                                   , is , inroot - 1 , inmap);
+                    
+                    root -> right = bt(preor , ps + numl + 1 , pe , inor
+                                   , inroot + 1 , ie , inmap);
                     return root;
                  }
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        int n = preorder.size();
+        if(n == 0) return NULL;
+        map<int , int>inmap;
+        for(int i = 0 ; i < n ; i++){
+            inmap[inorder[i]] = i;
+        }    
+
+        return bt(preorder , 0 , n - 1 , inorder , 0 , n - 1 , inmap);
+    }
 };
