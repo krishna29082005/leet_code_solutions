@@ -13,39 +13,39 @@ public:
         }
         int mini = INT_MAX;
         int ans = -1;
-        for(int i = 0; i < n; i++) {
+        for(int i = 0 ; i < n ; i++){
 
+            vector<int>vis(n , INT_MAX);
+            priority_queue<pair<int , int> , vector<pair<int , int>> , 
+            greater<pair<int , int>>>pq;
+            pq.push({0 , i});
+            vis[i] = 0;
+            while(!pq.empty()){
+                int dis = pq.top().first;
+                int node = pq.top().second;
+                pq.pop();
 
-        vector<int>dis(n , INT_MAX);
-        priority_queue<pair<int , int>,
-                       vector<pair<int , int>>,
-                       greater<pair<int , int>>>pq;
-        pq.push({0 , i});
-        dis[i] = 0;
+                for(auto it : adj[node]){
+                    int newnode = it.first;
+                    int newdis = it.second;
 
-        while(!pq.empty()){
-            int curdis = pq.top().first;
-            int temp = pq.top().second;
-            pq.pop();
-            if(curdis > dis[temp]) continue;
-            for(auto it : adj[temp]){
-                int t_temp = it.first;
-                int t_dis = it.second;
-                if(dis[temp] + t_dis < dis[t_temp]){
-                    dis[t_temp] = dis[temp] + t_dis;
-                    pq.push({dis[temp] + t_dis , t_temp});
+                    if(vis[newnode] > dis + newdis)
+                    {
+                        vis[newnode] = dis + newdis;
+                        pq.push({dis + newdis , newnode});
+                    }
                 }
             }
-        }
-        int cnt = 0;
-        for(int j = 0 ; j < n ; j++){
-            if(dis[j] <= distanceThreshold){
-                  cnt++;
+
+            int cnt = 0;
+            for(int i = 0 ; i < n ; i++){
+                if(vis[i] <= distanceThreshold){
+                    cnt++;
                 }
-        }
-        if(cnt <= mini){
-            mini = cnt;
-            ans = i;
+            }
+            if(cnt <= mini){
+                mini = cnt;
+                ans = i;
             }
         }
         return ans;
