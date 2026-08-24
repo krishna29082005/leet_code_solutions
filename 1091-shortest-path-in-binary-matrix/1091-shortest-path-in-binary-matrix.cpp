@@ -1,32 +1,37 @@
 class Solution {
 public:
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
+        priority_queue<pair<int , pair<int , int>> , vector<pair<int , pair<int , int>>> , greater<pair<int , pair<int , int>>>>pq;
+
+        if(grid[0][0] == 1) return -1;
         int n = grid.size();
-        if(grid[0][0] == 1 || grid[n-1][n-1] == 1)return -1;
-        queue<pair<int , pair<int , int>>>pq;
-        vector<vector<int>>vis(n , vector<int>(n , INT_MAX));
-        pq.push({1 ,{ 0 , 0}});
-        vis[0][0] = 1;
-        int delr[8] = {-1 , 0 , 1 , 0 , -1 , -1 , 1 , 1};
-        int delc[8] = {0 , 1 , 0 , -1 , -1 , 1 , 1 , -1};
+        int m = grid[0].size();
+        vector<vector<int>>dis(n , vector<int>(m , INT_MAX));
+
+        pq.push({1 , {0 , 0}});
+        dis[0][0] = 1;
+        
         while(!pq.empty()){
-            auto temp = pq.front();
-            int dis = temp.first;
-            int ni = temp.second.first;
-            int nj = temp.second.second;
-            if(ni == n - 1 && nj == n-1) return dis;
+            
+            int x = pq.top().second.first;
+            int y = pq.top().second.second;
             pq.pop();
-             
+            int dr[8] = {-1 , 0 , 1 , 0 , -1 , 1 , 1 , -1};
+            int dc[8] = {0 , 1 , 0 , -1 , 1 , 1 , -1 , -1};
+
             for(int i = 0 ; i < 8 ; i++){
-                int nrow = ni + delr[i];
-                int ncol = nj + delc[i];
-                if(nrow >= 0 && nrow < n && ncol >= 0 && ncol < n &&
-                grid[nrow][ncol] == 0 && vis[nrow][ncol] > dis + 1){
-                    vis[nrow][ncol] = dis + 1;
-                    pq.push({dis + 1 , {nrow , ncol}});
+                int nx = x + dr[i];
+                int ny = y + dc[i];
+                
+                if(nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] == 0){
+                    if(dis[nx][ny] > dis[x][y] + 1){
+                        dis[nx][ny] = dis[x][y] + 1;
+                        pq.push({dis[x][y] + 1 , {nx , ny}});
+                    }
                 }
             }
         }
-        return -1;
+        if(dis[n - 1][m - 1] == INT_MAX)return -1;
+        return dis[n - 1][m - 1];
     }
 };
