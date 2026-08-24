@@ -583,4 +583,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0127-word-ladder](https://github.com/krishna29082005/leet_code_solutions/tree/master/0127-word-ladder) |
+## Dijkstra's Algorithm
+|  |
+| ------- |
+| [1631-path-with-minimum-effort](https://github.com/krishna29082005/leet_code_solutions/tree/master/1631-path-with-minimum-effort) |
 <!---LeetCode Topics End-->
