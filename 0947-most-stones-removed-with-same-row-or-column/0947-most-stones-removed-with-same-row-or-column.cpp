@@ -41,28 +41,25 @@ public:
     int removeStones(vector<vector<int>>& stones) {
         int maxrow = 0;
         int maxcol = 0;
-        
-        for(auto it : stones)
-        {
-            maxrow = max(maxrow , it[0]);
-            maxcol = max(maxcol , it[1]);
+
+        for(auto it : stones){
+            maxrow = max(it[0] , maxrow);
+            maxcol = max(it[1] , maxcol);
         }
-        disjoint_set ds(maxrow + maxcol + 1);
-        unordered_map<int , int>sn;
-        int n = stones.size();
+        disjoint_set st(maxrow + maxcol + 1);
+        map<int , int>sn;
+        int no = stones.size();
         for(auto it : stones){
             int noderow = it[0];
             int nodecol = it[1] + maxrow + 1;
-            ds.union_it(noderow , nodecol);
+            st.union_it(noderow , nodecol);
             sn[noderow] = 1;
             sn[nodecol] = 1;
         }
         int cnt = 0;
         for(auto it : sn){
-           if(ds.find_par(it.first) == it.first){
-            cnt++;
-           }
+             if(st.find_par(it.first) == it.first) cnt++;
         }
-        return n - cnt;
+        return no - cnt;
     }
 };
