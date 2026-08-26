@@ -59,48 +59,52 @@ private:
 public:
     int largestIsland(vector<vector<int>>& grid) {
         int n = grid.size();
-        disjoint_set ds(n*n);
+        int m = grid[0].size();
+
+        disjoint_set ds(n*m);
+        int maxi = 0;
         for(int i = 0 ; i < n ; i++){
-            for(int j = 0 ; j < n ; j++){
+            for(int j = 0 ; j < m ; j++){
                 if(grid[i][j] == 0) continue;
+
                 int dr[4] = {-1 , 0 , 1 , 0};
                 int dc[4] = {0 , 1 , 0 , -1};
-                for(int d = 0 ; d < 4 ; d++){
-                    int nr = i + dr[d];
-                    int nc = j + dc[d];
-                    if(isvalid(nr , nc , n) && grid[nr][nc] == 1){
-                        int nodeno = i*n + j;
-                        int anodeno = nr*n + nc; 
-                        ds.union_size(nodeno , anodeno);
+
+                for(int k = 0 ; k < 4 ; k++){
+                    int nx = i + dr[k];
+                    int ny = j + dc[k];
+                    if(nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] == 1){
+                        int newnode = nx*m + ny;
+                        int oldnode = i*m + j;
+                        ds.union_size(newnode , oldnode);
                     }
-                }
+                } 
+                maxi = max(maxi , ds.size[ds.find_par(i*m + j)]);
             }
         }
-        //step 2:
-        int mx = 0;
+
         for(int i = 0 ; i < n ; i++){
-            for(int j = 0 ; j < n ; j++){
+            for(int j = 0 ; j < m ; j++){
                 if(grid[i][j] == 1) continue;
+                set<int> compo;
                 int dr[4] = {-1 , 0 , 1 , 0};
                 int dc[4] = {0 , 1 , 0 , -1};
-                set<int>component;
-                for(int d = 0 ; d < 4 ; d++){
-                    int ar = i + dr[d];
-                    int ac = j + dc[d];
-                    if(isvalid(ar , ac , n) && grid[ar][ac] == 1){
-                        component.insert(ds.find_par(ar*n + ac));
+
+                for(int k = 0 ; k < 4 ; k++){
+                    int nx = i + dr[k];
+                    int ny = j + dc[k];
+                    if(nx >= 0 && nx < n && ny >= 0 && ny < m && grid[nx][ny] == 1){
+                        int newnode = nx*m + ny;
+                        compo.insert(ds.find_par(newnode));
                     }
                 }
                 int sum = 0;
-                for(auto it : component){
+                for(auto it : compo){
                     sum += ds.size[it];
-                }
-                mx = max(mx , sum + 1);
+                } 
+                maxi = max(sum + 1, maxi);
             }
         }
-        
-            mx = max(mx , ds.size[ds.find_par(0)]);
-        
-        return mx;
+        return maxi;
     }
 };
