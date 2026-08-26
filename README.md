@@ -601,4 +601,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/krishna29082005/leet_code_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
+## Bridge (Graph)
+|  |
+| ------- |
+| [1192-critical-connections-in-a-network](https://github.com/krishna29082005/leet_code_solutions/tree/master/1192-critical-connections-in-a-network) |
 <!---LeetCode Topics End-->
