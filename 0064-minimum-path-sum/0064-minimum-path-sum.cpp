@@ -1,31 +1,29 @@
 class Solution {
+private:
+   int helper(int m  , int n , vector<vector<int>>& dp , vector<vector<int>>& grid){
+        if(m == 0 && n == 0) return dp[m][n] = grid[m][n];
+         
+        if(dp[m][n] != -1) return dp[m][n];
+
+        int up = 1e9;
+        if(m - 1 >= 0){
+           up = grid[m][n] + helper(m - 1 , n , dp , grid);
+        }
+
+        int left = 1e9;
+        if(n - 1 >= 0){
+           left = grid[m][n] + helper(m , n - 1 , dp , grid);
+        }
+        return dp[m][n] = min(up , left);
+    }
 public:
     int minPathSum(vector<vector<int>>& grid) {
         int m = grid.size();
         int n = grid[0].size();
-        vector<int> dp(n , -1);
-        if(m == 1 && n == 1) return grid[0][0];
-        dp[0] = grid[0][0];
-        for(int i = 0 ; i < m ; i++){
-            vector<int>temp(n , -1);
-            for(int j = 0 ; j < n ; j++){
-                if(i == 0 && j == 0) 
-                {
-                    temp[j] = grid[0][0];
-                    continue;
-                }
-                int up = 0;
-                int left = 0;
-                if(i - 1 < 0) up = 1e9;
-                else up = dp[j];
-
-                if(j - 1 < 0) left = 1e9;
-                else left = temp[j - 1];
-
-                temp[j] = grid[i][j] + min(up , left);
-            }
-            dp = temp;
-        }
-        return dp[n - 1];
+        if(n == 0 && m == 0) return 0;
+        
+        vector<vector<int>> dp(m , vector<int>(n , -1));
+        
+        return helper(m - 1 , n  - 1, dp , grid);
     }
 };
