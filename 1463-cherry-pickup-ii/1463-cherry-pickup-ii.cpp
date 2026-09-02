@@ -1,53 +1,52 @@
 class Solution {
-public:
-    int cherryPickup(vector<vector<int>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
-        vector<vector<vector<int>>>dp(
-                             m ,  
-                             vector<vector<int>>( 
-                             n,  
-                             vector<int>(n , -1)));
-    
-        
-        for(int col1 = 0; col1 < n; col1++) {
-            for(int col2 = 0; col2 < n; col2++) {
+private:
+    int helper(int row , int col1 , int col2 , vector<vector<int>>&grid
+     , vector<vector<vector<int>>>&dp){
+        int n = grid.size();
+        int m = grid[0].size();
+        if(col1 < 0 || col1 > m || col2 < 0 || col2 > m) return -1e9;
 
-            if(col1 == col2)
-               dp[m-1][col1][col2] = grid[m-1][col1];
-            else
-               dp[m-1][col1][col2] = grid[m-1][col1] + grid[m-1][col2];
+        if(row == n - 1){
+            if(col1 == col2){
+                return dp[row][col1][col2] = grid[row][col1];
+            }
+            else{
+                return dp[row][col1][col2] = grid[row][col1] + grid[row][col2];
+            }
         }
-    }
         
-    for(int row = m - 2 ; row >=0 ; row--){
-       for(int col1 = 0; col1 < n; col1++) {
-          for(int col2 = 0; col2 < n; col2++) {
-                int maxi = INT_MIN;
-                int reward = 0;
-                if(col1 == col2)
-                   reward = grid[row][col1];
-                else
-                   reward = grid[row][col1] + grid[row][col2];
+        if(dp[row][col1][col2] != -1) return dp[row][col1][col2];
 
-        for(int d1 = -1 ; d1 < 2 ; d1++){
-            for(int d2 = -1 ; d2 < 2 ; d2++){
-                int newcol1 = col1 + d1;
-                int newcol2 = col2 + d2;
-                int nextreward = 0;
-                if(newcol1 >= 0 && newcol1 < n && newcol2 >= 0 && newcol2< n)
-                    {
-                        nextreward = dp[row + 1][newcol1][newcol2];
-                        int totalreward = reward + nextreward;
-                        maxi = max(maxi , totalreward);
-                    }
+        int reward = 0;
+
+        if(col1 == col2){
+            reward = grid[row][col1];
+        }else{
+            reward = grid[row][col1] + grid[row][col2];
+        }
+        
+        int maxi = INT_MIN;
+        for(int i = -1 ; i < 2 ; i++)
+        {
+            int nc1 = col1 + i;
+            for(int j = -1 ; j < 2 ; j++){
+                int nc2 = col2 + j;
+                if(nc1 >= 0 && nc1 < m && nc2 >=0 && nc2 < m){
+                    int nextreward = helper(row + 1 , nc1 , nc2 , grid ,dp);
+                    int totalreward = reward + nextreward;
+                    maxi = max(maxi , totalreward);
                 }
             }
-            dp[row][col1][col2] = maxi;
         }
+        return dp[row][col1][col2] = maxi;
     }
-    }
-    return dp[0][0][n - 1];
-    }
-    
+public:
+    int cherryPickup(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+        vector<vector<vector<int>>>dp(n , vector<vector<int>>(m , vector<int>(m , -1)));
+
+        int ans = helper(0 , 0 , m - 1 , grid , dp);
+        return ans;
+    } 
 };
