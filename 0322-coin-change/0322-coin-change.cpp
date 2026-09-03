@@ -1,24 +1,26 @@
 class Solution {
-public:
-    int coinChange(vector<int>& coins, int amount) {
-        queue<pair<int , int>>q;
-        q.push({0 , amount});
-        vector<int>vis(amount + 1 , -1);
-        vis[amount] = 1;
-        while(!q.empty()){
-            int step = q.front().first;
-            int ca = q.front().second;
-            q.pop();
+    private:
+    int helper(int target , vector<int>&coins , vector<int>&dp){
+        if(target == 0) return 0;
 
-            if(ca == 0) return step;
+        if(dp[target] != INT_MAX) return dp[target];
+        int mini = 1e9;
 
-            for(int i = 0 ; i < coins.size() ; i++){
-                if(ca - coins[i] >= 0 && vis[ca - coins[i]] == -1){
-                    vis[ca - coins[i]] = 1;
-                    q.push({step + 1 , ca - coins[i]});
-                }
+        for(int i = 0 ; i < coins.size() ; i++){
+            if(target >= coins[i]){
+
+                int ans = helper(target - coins[i] , coins , dp);
+                if(ans == -1) continue;
+                mini = min(mini , ans + 1);
+
             }
         }
-        return -1;
+        if(mini == 1e9) return dp[target] = -1;
+        return dp[target] = mini;
+    }
+public:
+    int coinChange(vector<int>& coins, int amount) {
+        vector<int>dp(amount + 1 , INT_MAX);
+        return helper(amount , coins , dp);
     }
 };
