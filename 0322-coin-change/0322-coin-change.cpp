@@ -1,22 +1,24 @@
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        int n = coins.size();
-        vector<int>dp(amount + 1 , 1e9);
-        dp[0] = 0;
-        for(int i = 1 ; i < amount + 1 ; i++){
-            
-            int mini = 1e9;
-            for(int j = 0 ; j < coins.size() ; j++){  
+        queue<pair<int , int>>q;
+        q.push({0 , amount});
+        vector<int>vis(amount + 1 , -1);
+        vis[amount] = 1;
+        while(!q.empty()){
+            int step = q.front().first;
+            int ca = q.front().second;
+            q.pop();
 
-                if(i >= coins[j]){
-                   int ans = dp[i - coins[j]];
-                   mini = min(mini , ans + 1);
+            if(ca == 0) return step;
+
+            for(int i = 0 ; i < coins.size() ; i++){
+                if(ca - coins[i] >= 0 && vis[ca - coins[i]] == -1){
+                    vis[ca - coins[i]] = 1;
+                    q.push({step + 1 , ca - coins[i]});
                 }
             }
-            dp[i] = mini; 
         }
-        if(dp[amount] == 1e9) return -1;
-        return dp[amount];
+        return -1;
     }
 };
