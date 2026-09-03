@@ -609,4 +609,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0455-assign-cookies](https://github.com/krishna29082005/leet_code_solutions/tree/master/0455-assign-cookies) |
+## Knapsack Problem
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/krishna29082005/leet_code_solutions/tree/master/0322-coin-change) |
+## Complete Knapsack
+|  |
+| ------- |
+| [0322-coin-change](https://github.com/krishna29082005/leet_code_solutions/tree/master/0322-coin-change) |
 <!---LeetCode Topics End-->
