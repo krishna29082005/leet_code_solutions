@@ -9,10 +9,9 @@ private:
         if(dp[i][j] != INT_MAX) return dp[i][j];
         
         int same = triangle[i][j] + helper(i + 1 , j , triangle , n , dp);
-        int same1 = 1e9;
-        if(j + 1 <= i + 1){
-            same1 = triangle[i][j] + helper(i + 1 , j + 1 , triangle , n , dp);
-        }
+        
+        int same1 = triangle[i][j] + helper(i + 1 , j + 1 , triangle , n , dp);
+        
         return dp[i][j] = min(same , same1);
     }
 public:
