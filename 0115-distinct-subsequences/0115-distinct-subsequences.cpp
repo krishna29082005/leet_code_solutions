@@ -1,26 +1,24 @@
 class Solution {
+    private:
+    int f(int i , int j , string& s , string& t , vector<vector<int>>&dp){
+        if(j == t.size()) return 1;
+        if(i == s.size()) return 0;
+
+        if(dp[i][j] != -1) return dp[i][j];
+
+        if(s[i] == t[j]){
+            int pick = f(i + 1 , j + 1 , s , t , dp);
+            int nonpick = f(i + 1 , j , s , t , dp);
+            return dp[i][j] = pick + nonpick;
+        }
+        return dp[i][j] = f(i + 1 , j , s , t , dp);
+    }
 public:
     
     int numDistinct(string s, string t) {
-        int m = s.size();
-        int n = t.size();
-        vector<unsigned long long>dp(t.size() + 1, 0);
-        
-        for(int i = 0 ; i < n + 1 ; i++){
-            if(i == 0)dp[i] = 1;
-            else dp[i] = 0;
-        }
-        for(int i = 1 ; i < m + 1  ; i++){
-        
-            for(int j = n ; j >= 1 ; j--){
-                if(s[i - 1] == t[j - 1]){
-                    dp[j] = dp[j - 1] + dp[j];
-                }
-                else{
-                    dp[j] = dp[j];
-                }
-            }
-        }
-        return (int)dp[n];
+        int n = s.size();
+        int m = t.size();
+        vector<vector<int>>dp(n , vector<int>(m , -1));
+        return f(0 , 0 , s , t , dp);
     }
 };
