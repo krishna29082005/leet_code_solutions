@@ -1,35 +1,34 @@
 class Solution {
+    private:
+    bool f(int i , int j , int n , int m , string& s , string& p , vector<vector<int>>&dp){
+        if(i == n && j == m) return true;
+        if(i == n && j < m){
+            for(int k = j ; k < m ; k++){
+                if(p[k] != '*') return false;
+            }
+            return true;
+        }
+        if(i < n && j == m) return false;
+        
+        if(dp[i][j] != -1) return dp[i][j];
+
+        if(s[i] == p[j] || p[j] == '?'){
+            return dp[i][j] = f(i + 1 , j + 1 , n , m , s , p , dp);
+        }
+        else if(p[j] == '*'){
+            int match = f(i + 1 , j , n , m , s , p , dp);
+            int nomatch = f(i , j + 1 , n , m , s , p , dp);
+            return dp[i][j] = match||nomatch;
+        }
+        else{
+            return dp[i][j] = false;
+        }
+    }
 public:
     bool isMatch(string s, string p) {
-        int m = s.size();
-        int n = p.size();
-        vector<bool>dp(n + 1, false);
-        dp[0] = true;
-        
-        for(int i = 1 ; i < n + 1 ; i++){
-           if(p[i - 1] == '*')
-              dp[i] = dp[i - 1];
-           else
-              dp[i] = false;
-        }
-
-        for(int i = 1 ; i < m + 1 ; i++){
-            vector<bool>temp(n + 1, false);
-            temp[0] = false;
-            for(int j = 1 ; j < n + 1 ; j++){
-                if(s[i - 1] == p[j - 1]){
-                   temp[j] = dp[j - 1];
-                }
-                if(p[j - 1] == '?'){
-                   temp[j] = dp[ j - 1];
-                }
-
-                if(p[j - 1] == '*'){
-                   temp[j] = dp[j] || temp[j - 1];
-                } 
-            }
-            dp = temp;
-        }
-        return dp[n];
+        int n = s.size();
+        int m = p.size();
+        vector<vector<int>>dp(n , vector<int>(m , -1));
+        return f(0 , 0 , n , m , s , p , dp);
     }
 };
